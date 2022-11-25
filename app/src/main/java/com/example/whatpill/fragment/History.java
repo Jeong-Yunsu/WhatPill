@@ -78,8 +78,8 @@ public class History extends Fragment {
         //사용자 uid얻어오기
         firebaseAuth =  FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        String uid = user.getUid();
-//        String uid = "tvorTgHCHeSxbNmKMx8tXmJSU0S2";
+//        String uid = user.getUid();
+        String uid = "tvorTgHCHeSxbNmKMx8tXmJSU0S2";
 
         CollectionReference dbPath = db.collection("user").document(uid).collection("history");
         dbPath.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
